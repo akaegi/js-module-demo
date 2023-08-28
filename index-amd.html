@@ -1,0 +1,33 @@
+<html>
+<head></head>
+<body>
+<button onclick="AppModule.renderDateString()">Show current year</button>
+
+<!-- Renders to this container -->
+<p id="date-string-container"></p>
+
+<!-- If you omit type="module", browser complains: "Uncaught SyntaxError: Cannot use import statement outside a module" -->
+<script src="node_modules/requirejs/require.js"></script>
+
+<!-- see https://requirejs.org/docs/api.html#config -->
+<script>
+    require.config({
+        // baseUrl: "/another/path",
+        paths: {
+            "module-demo": "build/umd",
+            "dayjs": "node_modules/dayjs/dayjs.min",
+        },
+        waitSeconds: 15
+    });
+    require( ["module-demo/main"],
+        function(someModule, myModule) {
+            //This function will be called when all the dependencies
+            //listed above are loaded. Note that this function could
+            //be called before the page is loaded.
+            //This callback is optional.
+        }
+    );
+</script>
+
+</body>
+</html>

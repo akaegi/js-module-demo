@@ -3,9 +3,12 @@
   "scripts": {
     "start": "simple-dev-server",
     "build:main": "tsc -p tsconfig.json",
-    "build:esm": "tsc -p tsconfig.esm.json"
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:umd": "tsc -p tsconfig.umd.json"
   },
   "dependencies": {
+    "dayjs": "^1.11.9",
+    "requirejs": "^2.3.6",
     "simple-dev-server": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"

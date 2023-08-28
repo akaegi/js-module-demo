@@ -2,9 +2,12 @@ module.exports = {
     // proxy: {
     //     '/api/*': 'http://url.of.prod.api/',
     // },
-    // app: '/index.html'
+    // app: '/index-esm.html'
     publicPaths: {
-        '/index.html': 'index.html',
-        '/module-demo': 'build/esm'
+        '/index-esm.html': 'index-esm.html',
+        '/index-amd.html': 'index-amd.html',
+        '/build': 'build',
+        '/node_modules/requirejs': 'node_modules/requirejs',
+        '/node_modules/dayjs': 'node_modules/dayjs'
     }
 };

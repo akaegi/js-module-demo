@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+<button onclick="AppModule.renderDateString()">Show current year</button>
+
+<!-- Renders to this container -->
+<p id="date-string-container"></p>
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps -->
+<script type="importmap">
+    {
+      "imports": {
+        "module-demo/": "./module-demo/"
+      }
+    }
+</script>
+
+<!-- If you omit type="module", browser complains: "Uncaught SyntaxError: Cannot use import statement outside a module" -->
+<script type="module" src="module-demo/main.js"></script>
+</body>
+</html>

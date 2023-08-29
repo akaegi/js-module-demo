@@ -15,9 +15,8 @@
         // baseUrl: "/another/path",
         paths: {
             "module-demo": "build/umd",
-            "dayjs": "node_modules/dayjs/dayjs.min",
-        },
-        waitSeconds: 15
+            "lodash": "./node_modules/lodash/lodash"
+        }
     });
     require( ["module-demo/main"],
         function(someModule, myModule) {

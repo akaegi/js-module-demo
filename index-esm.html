@@ -8,14 +8,25 @@
 
 <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps -->
 <script type="importmap">
-    {
-      "imports": {
-        "module-demo/date-utils": "./build/esm/date-utils.js",
-        "module-demo/smiley": "./build/esm/smiley.js",
-        "lodash": "./node_modules/lodash-es/lodash.js"
-      }
+  {
+    "imports": {
+      "module-demo/date-utils": "./build/esm/date-utils.js",
+      "module-demo/smiley": "./build/esm/smiley.js",
+      "lodash": "./node_modules/lodash-es/lodash.js"
     }
+  }
 </script>
+
+<!-- Defining an importmap entry for all files in "module-demo/" doesn't work because of missing .js suffix in imports -->
+<!--<script type="importmap">-->
+<!--    {-->
+<!--      "imports": {-->
+<!--        "module-demo/": "./build/esm/",-->
+<!--        "lodash": "./node_modules/lodash-es/lodash.js"-->
+<!--      }-->
+<!--    }-->
+<!--</script>-->
+
 
 <!-- If you omit type="module", browser complains: "Uncaught SyntaxError: Cannot use import statement outside a module" -->
 <script type="module" src="build/esm/main.js"></script>

@@ -2,16 +2,15 @@ import { dateToYear } from 'module-demo/date-utils';
 import smiley from 'module-demo/smiley';
 import * as _ from 'lodash';
 
-// if (moment && !moment.default) {
-//     moment.default = moment;
-// }
-
 function renderDateString() {
     const container = document?.querySelector('#date-string-container');
     if (container) {
-        container.textContent = `The year is: ${dateToYear(new Date())} ${smiley}`;
+        container.innerHTML = `The year is: ${dateToYear(new Date())} ${smiley}`;
 
-        container.textContent += ' ' + _.join(['a', 'b', 'c'], '-');
+        container.innerHTML += '<br>Lodash _.chain(...).join(): ' + _.chain(['a', 'b', 'c']).join('-');
+
+        container.innerHTML += '<br>Lodash _(...).join(): ' + _(['a', 'b', 'c']).join('-');
+    }
 }
 
 // Make our "app" available in global scope since it is not by default because of ES Modules

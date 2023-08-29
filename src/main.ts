@@ -1,14 +1,14 @@
 import { dateToYear } from 'module-demo/date-utils';
 import smiley from 'module-demo/smiley';
-// import * as dayjs from 'dayjs';
+import * as dayjs from 'dayjs';
 
 function renderDateString() {
     const container = document?.querySelector('#date-string-container');
     if (container) {
         container.textContent = `The year is: ${dateToYear(new Date())} ${smiley}`;
 
-        // const now = dayjs();
-        // container.textContent += '  dayjs=' + now.toISOString();
+        const now = dayjs();
+        container.textContent += '  dayjs=' + now.toISOString();
     }
 }
 

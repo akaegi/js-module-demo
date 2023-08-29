@@ -1,0 +1,12 @@
+<html>
+<head></head>
+<body>
+<button onclick="AppModule.renderDateString()">Show current year</button>
+
+<!-- Renders to this container -->
+<p id="date-string-container"></p>
+
+<!-- If you omit type="module", browser complains: "Uncaught SyntaxError: Cannot use import statement outside a module" -->
+<script src="build/webpack/bundle.js"></script>
+</body>
+</html>

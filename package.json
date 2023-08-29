@@ -1,16 +1,23 @@
 {
   "name": "module-demo",
   "scripts": {
-    "start": "simple-dev-server",
+    "start": "webpack serve",
     "build:main": "tsc -p tsconfig.json",
     "build:esm": "tsc -p tsconfig.esm.json",
-    "build:umd": "tsc -p tsconfig.umd.json"
+    "build:umd": "tsc -p tsconfig.umd.json",
+    "build:webpack": "webpack"
   },
   "dependencies": {
     "dayjs": "^1.11.9",
     "requirejs": "^2.3.6",
-    "simple-dev-server": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.4.4",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
